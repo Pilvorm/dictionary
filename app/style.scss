@@ -33,3 +33,9 @@ $red-500: #ff5252;
     background-color: white;
   }
 }
+
+.search-input {
+    &:focus {
+        outline: none;
+    }
+}
