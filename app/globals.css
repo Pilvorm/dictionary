@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+@theme {
+  --color-neutral-950: #000000;
+  --color-neutral-900: #1f1f1f;
+  --color-neutral-800: #2d2d2d;
+  --color-neutral-700: #3a3a3a;
+  --color-neutral-500: #757575;
+  --color-neutral-200: #e9e9e9;
+  --color-neutral-100: #f4f4f4;
+  --color-neutral-0:   #ffffff;
+
+  --color-purple-500: #a445ed;
+  --color-purple-600: #8f1e98;
+
+  --color-red-500: #ff5252;
+}
