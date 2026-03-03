@@ -11,18 +11,22 @@ $purple-600: #8f1e98;
 $red-500: #ff5252;
 
 // Default
-body {
+body, .option-sans {
   font-family: var(--font-sans);
 }
 
 // Sans Serif
-html[data-font="serif"] body {
+html[data-font="serif"] body, .option-serif {
   font-family: var(--font-serif);
 }
 
 // Serif
-html[data-font="mono"] body {
+html[data-font="mono"] body, .option-mono {
   font-family: var(--font-mono);
+}
+
+.menu-items {
+  box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.1);
 }
 
 .switch {
@@ -58,10 +62,9 @@ html[data-font="mono"] body {
   li {
     list-style-type: disc;
     padding-left: 8px;
-    
+
     &::marker {
       color: $purple-600;
-
     }
   }
 }

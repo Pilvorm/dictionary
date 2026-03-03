@@ -13,7 +13,7 @@ const FontSwitch = () => {
   return (
     <div className="text-right text-sm/6">
       <Menu>
-        <MenuButton className="cursor-pointer capitalize inline-flex items-center gap-4 font-semibold shadow-inner shadow-white/10 outline-none">
+        <MenuButton className={`option-${currentFont} cursor-pointer capitalize inline-flex items-center gap-4 font-semibold shadow-inner shadow-white/10 outline-none`}>
           {currentFont}
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -33,11 +33,11 @@ const FontSwitch = () => {
         <MenuItems
           transition
           anchor="bottom end"
-          className="w-52 origin-top-right rounded-xl bg-white shadow-xs p-1 transition duration-100 ease-out [--anchor-gap:--spacing(1)] outline-none data-closed:scale-95 data-closed:opacity-0"
+          className="menu-items w-52 origin-top-right rounded-xl bg-white p-1 transition duration-100 ease-out [--anchor-gap:--spacing(1)] focus:outline-none data-closed:scale-95 data-closed:opacity-0"
         >
           {fontTypes.map((font, idx) => (
             <MenuItem key={font} onClick={() => setCurrentFont(font)}>
-              <button className="group cursor-pointer capitalize flex w-full items-center gap-2 rounded-lg px-3 py-1.5 transition duration-50 ease-out data-focus:bg-purple-500/10">
+              <button className={`option-${font} group cursor-pointer capitalize flex w-full items-center gap-2 rounded-lg px-3 py-1.5 transition duration-50 ease-out data-focus:bg-purple-500/10`}>
                 {font}
               </button>
             </MenuItem>
