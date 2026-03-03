@@ -28,9 +28,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${inconsolata.variable} ${inter.variable} ${lora.variable} text-neutral-800 antialiased`}
+        className={`${inconsolata.variable} ${inter.variable} ${lora.variable} text-neutral-800 antialiased px-6 md:px-10`}
       >
-        <div className="w-[50%] mx-auto my-15">
+        <div className="lg:w-[65%] xl:w-[50%] mx-auto mt-6 mb-12 md:my-15">
           <Navigation />
           {children}
         </div>

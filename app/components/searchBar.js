@@ -6,35 +6,39 @@ import NewWindow from "@/public/assets/images/icon-new-window.svg";
 
 const SearchBar = () => {
   return (
-    <div className="flex flex-col gap-12">
+    <div className="flex flex-col gap-7 md:gap-12">
+      {/* Search Bar */}
       <div className="w-full px-6 py-5 bg-neutral-100 rounded-2xl flex items-center justify-between">
         <input
-          className="search-input w-9/10 text-xl font-semibold outline-none"
+          className="search-input w-9/10 text-base md:text-xl font-semibold outline-none"
           placeholder="Search a word"
         />
         <Image src={Search} className="" width="16" alt="Search icon" />
       </div>
 
+      {/* Pronounciation */}
       <section className="flex items-center justify-between">
         <div>
-          <h1 className="text-5xl font-bold">keyboard</h1>
-          <p className="mt-3 text-2xl text-purple-500">/ˈkiːbɔːd/</p>
+          <h1 className="text-[32px] md:text-5xl font-bold">keyboard</h1>
+          <p className="md:mt-3 text-lg md:text-2xl text-purple-500">
+            /ˈkiːbɔːd/
+          </p>
         </div>
         <button type="button" className="cursor-pointer flex items-center">
-          <Image src={Play} width="75" alt="Play icon" />
+          <Image src={Play} alt="Play icon" className="w-[48px] md:w-[75px]" />
         </button>
       </section>
 
+      {/* Noun */}
       <section className="flex flex-col gap-10">
-        {/* Noun */}
         <div className="flex items-center gap-5">
-          <h2 className="text-2xl italic font-semibold">noun</h2>
+          <h2 className="text-lg md:text-2xl italic font-semibold">noun</h2>
           <div className="h-[1] w-full bg-neutral-200"> </div>
         </div>
 
         <div>
           <h3 className="mb-6 text-xl text-neutral-500">Meaning</h3>
-          <ul className="meaning-list text-lg">
+          <ul className="meaning-list text-[15px] md:text-lg">
             <li>
               (etc.) A set of keys used to operate a typewriter, computer etc.
             </li>
@@ -51,24 +55,24 @@ const SearchBar = () => {
           </ul>
         </div>
 
-        <div className="flex gap-6">
-          <h3 className="text-xl text-neutral-500">Synonyms</h3>
-          <p className="text-xl text-purple-500 font-semibold">
+        <div className="flex gap-6 text-base md:text-xl">
+          <h3 className="text-neutral-500">Synonyms</h3>
+          <p className="text-purple-500 font-semibold">
             electronic keyboard
           </p>
         </div>
       </section>
 
+      {/* Verb */}
       <section className="flex flex-col gap-10">
-        {/* Verb */}
         <div className="flex items-center gap-5">
-          <h2 className="text-2xl italic font-semibold">verb</h2>
+          <h2 className="text-lg md:text-2xl italic font-semibold">verb</h2>
           <div className="h-[1] w-full bg-neutral-200"> </div>
         </div>
 
         <div>
-          <h3 className="mb-6 text-xl text-neutral-500">Meaning</h3>
-          <ul className="meaning-list text-lg">
+          <h3 className="mb-6 text-base md:text-xl text-neutral-500">Meaning</h3>
+          <ul className="meaning-list text-[15px] md:text-lg">
             <li className="">
               To type on a computer keyboard.
               <p className="mt-3 text-neutral-500">
@@ -81,11 +85,11 @@ const SearchBar = () => {
 
       <section className="">
         <div className="mb-5 h-[1] w-full bg-neutral-200"> </div>
-        <div className="flex items-center text-sm">
+        <div className="flex max-md:flex-col max-md:items-start items-center gap-2 md:gap-6 text-sm">
           <div className="text-neutral-500">Source</div>
           <Link
             href={"https://en.wiktionary.org/wiki/keyboard"}
-            className="ml-6 flex underline"
+            className="flex underline"
           >
             https://en.wiktionary.org/wiki/keyboard
             <Image
