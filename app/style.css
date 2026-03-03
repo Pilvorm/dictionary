@@ -1,3 +1,15 @@
+body {
+  font-family: var(--font-sans);
+}
+
+html[data-font=serif] body {
+  font-family: var(--font-serif);
+}
+
+html[data-font=mono] body {
+  font-family: var(--font-mono);
+}
+
 .switch {
   cursor: pointer;
   display: flex;
@@ -20,6 +32,16 @@
   background-color: white;
 }
 
-.search-input:focus {
-  outline: none;
+.meaning-list {
+  padding-left: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.meaning-list li {
+  list-style-type: disc;
+  padding-left: 8px;
+}
+.meaning-list li::marker {
+  color: #8f1e98;
 }/*# sourceMappingURL=style.css.map */
