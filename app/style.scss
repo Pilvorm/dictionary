@@ -53,6 +53,15 @@ html[data-font="mono"] body, .option-mono {
   }
 }
 
+.audio-btn {
+  transition: all 0.2s ease-in-out;
+  
+  &:hover {
+    box-shadow: 0 0 30px rgba(164, 69, 237, 0.8);
+    transition: all 0.2s ease-in-out;
+  }
+}
+
 .meaning-list {
   padding-left: 32px;
   display: flex;

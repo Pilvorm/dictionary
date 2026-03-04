@@ -1,19 +1,25 @@
+"use client";
+
 import { useState, useEffect } from "react";
 import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
 
 const fontTypes = ["sans", "serif", "mono"];
 
-const FontSwitch = () => {
-  const [currentFont, setCurrentFont] = useState(fontTypes[0]);
+const FontSwitch = ({savedFont}) => {
+  const [currentFont, setCurrentFont] = useState(savedFont || fontTypes[0]);
 
   useEffect(() => {
     document.documentElement.setAttribute("data-font", currentFont);
+
+    document.cookie = `font=${currentFont}; path=/; max-age=31536000`;
   }, [currentFont]);
 
   return (
     <div className="text-right text-sm/6">
       <Menu>
-        <MenuButton className={`option-${currentFont} cursor-pointer capitalize inline-flex items-center gap-4 font-semibold shadow-inner shadow-white/10 outline-none`}>
+        <MenuButton
+          className={`option-${currentFont} cursor-pointer capitalize inline-flex items-center gap-4 font-semibold shadow-inner shadow-white/10 outline-none`}
+        >
           {currentFont}
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -37,7 +43,9 @@ const FontSwitch = () => {
         >
           {fontTypes.map((font, idx) => (
             <MenuItem key={font} onClick={() => setCurrentFont(font)}>
-              <button className={`option-${font} group cursor-pointer capitalize flex w-full items-center gap-2 rounded-lg px-3 py-1.5 transition duration-50 ease-out data-focus:bg-purple-500/10`}>
+              <button
+                className={`option-${font} group cursor-pointer capitalize flex w-full items-center gap-2 rounded-lg px-3 py-1.5 transition duration-50 ease-out data-focus:bg-purple-500/10`}
+              >
                 {font}
               </button>
             </MenuItem>

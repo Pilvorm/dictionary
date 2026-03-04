@@ -8,7 +8,7 @@ const Source = ({ url }) => {
       <div className="mb-5 h-[1] w-full bg-neutral-200"> </div>
       <div className="flex max-md:flex-col max-md:items-start items-center gap-2 md:gap-6 text-sm">
         <div className="text-neutral-500">Source</div>
-        <Link href={url} className="flex underline">
+        <a href={url} target="_blank" className="flex underline">
           {url}
           <Image
             src={NewWindow}
@@ -16,7 +16,7 @@ const Source = ({ url }) => {
             alt="Open in new window"
             className="ml-2"
           />
-        </Link>
+        </a>
       </div>
     </section>
   );

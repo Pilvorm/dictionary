@@ -8,13 +8,15 @@ import Moon from "@/public/assets/images/icon-moon.svg";
 import FontSwitch from "./fontSwitch";
 import SwitchButton from "./switch";
 
-const Navigation = ({}) => {
+const Navigation = ({savedFont}) => {
+
   const [isDarkMode, setIsDarkMode] = useState(false);
+
   return (
     <nav className="flex items-center justify-between">
       <Image src={Logo} className="" width="32" alt="Dictionary Logo" />
       <div className="flex items-center gap-3">
-        <FontSwitch />
+        <FontSwitch savedFont={savedFont} />
         <div className="w-[1px] h-8 bg-neutral-200"></div>
         <SwitchButton
           isOn={isDarkMode}
