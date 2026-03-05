@@ -1,4 +1,3 @@
-import { notFound } from "next/navigation";
 import Pronounciation from "../components/pronounciation";
 import Source from "../components/source";
 
@@ -17,7 +16,9 @@ const WordContent = async ({ word }) => {
       <div className="flex flex-col items-center justify-center text-center">
         <div className="text-6xl">😕</div>
         <h1 className="mt-12 text-lg font-bold">{notFound.title}</h1>
-        <p className="mt-5 text-neutral-500">{notFound.message} {notFound.resolution}</p>
+        <p className="mt-5 text-neutral-500">
+          {notFound.message} {notFound.resolution}
+        </p>
       </div>
     );
   }

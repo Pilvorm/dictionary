@@ -48,7 +48,9 @@ const SearchBar = () => {
           placeholder={`${emptyQuery ? "Whoops, can't be empty..." : "Search for any word..."}`}
           className="w-9/10 text-base md:text-xl font-semibold outline-none bg-transparent placeholder:text-neutral-800/25 dark:placeholder:text-neutral-0/25"
         />
-        <Image src={Search} width="16" alt="Search icon" />
+        <button type="submit" className="cursor-pointer">
+    <Image src={Search} width="16" alt="Search icon" />
+  </button>
       </form>
       {/* <AnimatePresence>
         {emptyQuery && (
