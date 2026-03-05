@@ -21,7 +21,7 @@ const Pronounciation = ({ word, phonetic, audio }) => {
         type="button"
         onClick={handlePlay}
         disabled={!audio}
-        className="audio-btn cursor-pointer flex items-center justify-center disabled:opacity-50 w-[48px] h-[48px] md:w-[75px] md:h-[75px] rounded-full bg-purple-500/25"
+        className="audio-btn cursor-pointer flex items-center justify-center disabled:opacity-50 w-[48px] h-[48px] md:w-[75px] md:h-[75px] rounded-full bg-purple-500/25 hover:shadow-[0_0_30px_5px_rgba(164,69,237,0.8)] transition duration-350 ease-in-out"
       >
         <svg
           width="21"
@@ -32,8 +32,8 @@ const Pronounciation = ({ word, phonetic, audio }) => {
           className="ml-[3px] md:ml-[6px] max-md:w-[13px]"
         >
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M0 0V21L21 10.5L0 0Z"
             fill="#A445ED"
           />

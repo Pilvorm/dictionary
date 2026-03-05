@@ -25,10 +25,6 @@ html[data-font="mono"] body, .option-mono {
   font-family: var(--font-mono);
 }
 
-.menu-items {
-  box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.1);
-}
-
 .switch {
   cursor: pointer;
   display: flex;
@@ -50,15 +46,6 @@ html[data-font="mono"] body, .option-mono {
     height: 14px;
     border-radius: 50%;
     background-color: white;
-  }
-}
-
-.audio-btn {
-  transition: all 0.2s ease-in-out;
-  
-  &:hover {
-    box-shadow: 0 0 30px rgba(164, 69, 237, 0.8);
-    transition: all 0.2s ease-in-out;
   }
 }
 

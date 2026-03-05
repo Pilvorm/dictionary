@@ -37,6 +37,7 @@ const SearchBar = () => {
         onSubmit={handleSubmit}
         className={`mt-14 w-full px-6 py-5 bg-neutral-100 rounded-2xl 
                 flex items-center justify-between
+                dark:bg-neutral-900
                 border-1 border-transparent
                 ${emptyQuery ? "focus-within:border-red-500" : "focus-within:border-purple-500"}
                 transition duration-100 ease-out`}
@@ -45,7 +46,7 @@ const SearchBar = () => {
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder={`${emptyQuery ? "Whoops, can't be empty..." : "Search for any word..."}`}
-          className="w-9/10 text-base md:text-xl font-semibold outline-none bg-transparent"
+          className="w-9/10 text-base md:text-xl font-semibold outline-none bg-transparent placeholder:text-neutral-800/25 dark:placeholder:text-neutral-0/25"
         />
         <Image src={Search} width="16" alt="Search icon" />
       </form>

@@ -29,14 +29,15 @@ export const metadata = {
 export default async function RootLayout({ children }) {
   const cookieStore = await cookies();
   const font = cookieStore.get("font")?.value || "sans";
+  const theme = cookieStore.get("theme")?.value || "light"
 
   return (
-    <html lang="en" data-font={font}>
+    <html lang="en" data-font={font} className={theme}>
       <body
-        className={`${inconsolata.variable} ${inter.variable} ${lora.variable} text-neutral-800 antialiased px-6 md:px-10`}
+        className={`${inconsolata.variable} ${inter.variable} ${lora.variable} dark:bg-neutral-950 text-neutral-800 dark:text-neutral-0 antialiased px-6 md:px-10 transition duration-100 ease-out`}
       >
         <div className="lg:w-[65%] xl:w-[50%] mx-auto mt-6 mb-12 md:my-15">
-          <Navigation savedFont={font} />
+          <Navigation savedFont={font} savedTheme={theme}/>
           <SearchBar />
           <main className="mt-14">{children}</main>
         </div>
