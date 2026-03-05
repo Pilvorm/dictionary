@@ -21,6 +21,7 @@ const Pronounciation = ({ word, phonetic, audio }) => {
         type="button"
         onClick={handlePlay}
         disabled={!audio}
+        aria-label="Hear pronunciation"
         className="audio-btn cursor-pointer flex items-center justify-center disabled:opacity-50 w-[48px] h-[48px] md:w-[75px] md:h-[75px] rounded-full bg-purple-500/25 not-disabled:hover:shadow-[0_0_30px_5px_rgba(164,69,237,0.8)] transition duration-350 ease-in-out"
       >
         <svg
@@ -38,6 +39,7 @@ const Pronounciation = ({ word, phonetic, audio }) => {
             fill="#A445ED"
           />
         </svg>
+        <span className="sr-only">Play pronunciation</span>
       </button>
     </section>
   );

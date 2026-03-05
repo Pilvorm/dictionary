@@ -45,6 +45,7 @@ const SearchBar = () => {
         <input
           value={query}
           onChange={(e) => setQuery(e.target.value)}
+          type="text"
           placeholder={`${emptyQuery ? "Whoops, can't be empty..." : "Search for any word..."}`}
           className="w-9/10 text-base md:text-xl font-semibold outline-none bg-transparent placeholder:text-neutral-800/25 dark:placeholder:text-neutral-0/25"
         />
