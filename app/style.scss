@@ -10,18 +10,40 @@ $purple-500: #a445ed;
 $purple-600: #8f1e98;
 $red-500: #ff5252;
 
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $purple-500;
+  border: 4px solid rgba(0, 0, 0, 0);
+  background-clip: padding-box;
+  border-radius: 9999px;
+  background-image: -webkit-gradient(
+    linear,
+    0 0,
+    0 100%,
+    color-stop(0.5, rgba(255, 255, 255, 0.2)),
+    color-stop(0.5, transparent),
+    to(transparent)
+  );
+}
+
 // Default
-body, .option-sans {
+body,
+.option-sans {
   font-family: var(--font-sans);
 }
 
 // Sans Serif
-html[data-font="serif"] body, .option-serif {
+html[data-font="serif"] body,
+.option-serif {
   font-family: var(--font-serif);
 }
 
 // Serif
-html[data-font="mono"] body, .option-mono {
+html[data-font="mono"] body,
+.option-mono {
   font-family: var(--font-mono);
 }
 
