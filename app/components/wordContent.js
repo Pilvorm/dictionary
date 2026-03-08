@@ -1,5 +1,6 @@
 import Pronounciation from "../components/pronounciation";
 import Source from "../components/source";
+import Loading from "../[word]/loading";
 
 const WordContent = async ({ word }) => {
   const res = await fetch(
@@ -53,6 +54,8 @@ const WordContent = async ({ word }) => {
         phonetic={entry.phonetic}
         audio={audio}
       />
+
+      <Loading />
 
       {entry.meanings.map((meaning, index) => (
         <section key={index} className="flex flex-col gap-10">
